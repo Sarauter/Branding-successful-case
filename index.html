@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de marca B2B en 9 semanas | Andrea Saravia Sauter</title>
+<meta name="description" content="Cómo una sola Marketing Director ejecutó, sin equipo, lo que normalmente requiere una agencia completa: naming, identidad visual, narrativa, web y producción.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E1E30;
+    --navy-mid:#1B3048;
+    --accent:#E8672A;
+    --accent-light:#F5A06B;
+    --gold:#C9A84C;
+    --white:#FAFAF8;
+    --grey-light:#F0EDE8;
+    --grey-mid:#C8C4BC;
+    --grey-text:#6B6560;
+    --text:#1A1614;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--white);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    background:var(--navy);
+    color:var(--white);
+    padding:72px 8vw 0;
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;
+    top:-140px; right:-140px;
+    width:480px; height:480px;
+    background:radial-gradient(circle, rgba(232,103,42,0.22), transparent 70%);
+    border-radius:50%;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent-light);
+    border:1px solid rgba(232,103,42,0.4);
+    padding:5px 12px;
+    border-radius:20px;
+    margin-bottom:28px;
+    position:relative; z-index:1;
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
+  h1{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(34px, 4.8vw, 58px);
+    font-weight:400;
+    line-height:1.14;
+    max-width:880px;
+    position:relative; z-index:1;
+  }
+  h1 em{color:var(--accent-light);font-style:italic;}
+  .subtitle{
+    margin-top:20px;
+    font-size:17.5px;
+    color:var(--grey-mid);
+    max-width:640px;
+    position:relative; z-index:1;
+  }
+
+  /* stat ribbon */
+  .stat-ribbon{
+    margin-top:54px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(255,255,255,0.12);
+    position:relative; z-index:1;
+  }
+  .stat{
+    padding:26px 0 30px;
+    border-right:1px solid rgba(255,255,255,0.12);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(28px,3.4vw,40px);
+    color:var(--accent-light);
+  }
+  .stat .label{
+    margin-top:4px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--grey-mid);
+  }
+
+  /* ---------- THESIS ---------- */
+  .thesis{
+    padding:80px 8vw 60px;
+    max-width:980px;
+  }
+  .thesis p{
+    font-family:'DM Serif Display',serif;
+    font-style:italic;
+    font-size:clamp(22px,2.6vw,30px);
+    line-height:1.4;
+    color:var(--navy);
+  }
+  .thesis p::before{content:"“";color:var(--accent);}
+  .thesis p::after{content:"”";color:var(--accent);}
+  .thesis-credit{
+    margin-top:18px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    color:var(--grey-text);
+  }
+
+  /* ---------- reveal-on-scroll ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- SECTIONS ---------- */
+  .section{padding:0 8vw 84px; max-width:1100px;}
+  .section-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .section h2{
+    font-family:'DM Serif Display',serif;
+    font-weight:400;
+    font-size:clamp(24px,2.8vw,34px);
+    color:var(--navy);
+    max-width:760px;
+  }
+  .section-intro{margin-top:14px;color:var(--grey-text);max-width:680px;font-size:15px;}
+
+  /* ---------- SYSTEM MAP ---------- */
+  .system-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--grey-mid);
+    border:1px solid var(--grey-mid);
+  }
+  .system-cell{
+    background:var(--white);
+    padding:24px 24px;
+    transition:background .25s ease;
+  }
+  .system-cell:hover{background:var(--grey-light);}
+  .system-cell .role{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  .system-cell .role::before{content:"// ";color:var(--grey-mid);}
+  .system-cell h3{font-weight:700;font-size:16.5px;margin-top:6px;color:var(--navy);}
+  .system-cell p{margin-top:8px;font-size:13.6px;color:var(--grey-text);}
+  .system-foot{
+    margin-top:26px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:13px;
+    color:var(--navy-mid);
+    background:var(--grey-light);
+    padding:14px 18px;
+    border-left:3px solid var(--accent);
+  }
+
+  /* ---------- LOG (interactive, expandable) ---------- */
+  .log-wrap{margin-top:44px; position:relative; padding-left:32px;}
+  .log-line{
+    position:absolute; left:6px; top:6px; width:2px;
+    background:linear-gradient(to bottom, var(--accent), var(--navy-mid) 92%, transparent);
+    height:0; transition:height 1.4s ease;
+  }
+  .log-entry{position:relative; padding-bottom:30px; cursor:pointer;}
+  .log-entry:last-child{padding-bottom:0;}
+  .log-entry::before{
+    content:"";
+    position:absolute; left:-32px; top:4px;
+    width:13px; height:13px; border-radius:50%;
+    background:var(--white); border:3px solid var(--accent);
+    transition:transform .2s ease;
+  }
+  .log-entry:hover::before{transform:scale(1.25);}
+  .log-date{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);}
+  .log-date .tagtype{color:var(--grey-text);margin-left:10px;}
+  .log-entry h4{font-weight:700;font-size:16.5px;color:var(--navy);margin-top:6px;display:flex;align-items:center;gap:8px;}
+  .log-entry .chev{font-size:12px;color:var(--grey-mid);transition:transform .25s ease;}
+  .log-entry.open .chev{transform:rotate(90deg);}
+  .log-detail{
+    max-height:0; overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .log-entry.open .log-detail{max-height:200px;}
+  .log-detail p{
+    margin-top:8px; font-size:14px; color:var(--grey-text); max-width:680px;
+  }
+  .log-detail p b{color:var(--text); font-weight:600;}
+  .log-hint{font-size:12px; color:var(--grey-mid); margin-top:4px;}
+
+  /* ---------- PROVES ---------- */
+  .proves-grid{margin-top:36px; display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .proves-card{background:var(--navy); color:var(--white); padding:32px 30px; border-radius:4px;}
+  .proves-card .role{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-light);
+  }
+  .proves-card h3{font-family:'DM Serif Display',serif;font-weight:400;font-size:21px;margin-top:8px;margin-bottom:16px;}
+  .proves-card ul{list-style:none;}
+  .proves-card li{font-size:14px;color:var(--grey-mid);padding-left:18px;position:relative;margin-bottom:10px;}
+  .proves-card li::before{content:"•";color:var(--accent);position:absolute;left:0;}
+
+  /* ---------- COMPETENCY CARDS (recruiter-facing close) ---------- */
+  .competency-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--grey-mid);
+    border:1px solid var(--grey-mid);
+  }
+  .competency-card{
+    background:var(--white);
+    padding:30px 28px;
+    transition:background .25s ease;
+  }
+  .competency-card:hover{background:var(--grey-light);}
+  .competency-card .ck{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  .competency-card h3{
+    font-family:'DM Sans',sans-serif;
+    font-weight:700;
+    font-size:17px;
+    margin-top:8px;
+    color:var(--navy);
+    line-height:1.35;
+  }
+  .competency-card p{
+    margin-top:10px;
+    font-size:14px;
+    color:var(--grey-text);
+  }
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:var(--accent);
+    padding:56px 8vw;
+    text-align:center;
+  }
+  .cta h2{
+    font-family:'DM Serif Display',serif;
+    font-weight:400;
+    font-size:clamp(22px,2.8vw,30px);
+    color:var(--navy);
+    max-width:640px;
+    margin:0 auto 18px;
+  }
+  .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+  .btn{
+    font-family:'DM Sans',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    padding:13px 26px;
+    border-radius:4px;
+    text-decoration:none;
+    transition:transform .15s ease, opacity .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--navy);color:var(--white);}
+  .btn-secondary{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
+
+  footer{
+    background:var(--navy);
+    color:var(--grey-mid);
+    padding:28px 8vw;
+    font-family:'JetBrains Mono',monospace;
+    font-size:12px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  @media (max-width:860px){
+    .system-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:720px){
+    .system-grid{grid-template-columns:1fr;}
+    .proves-grid{grid-template-columns:1fr;}
+    .competency-grid{grid-template-columns:1fr;}
+    .stat-ribbon{grid-template-columns:repeat(2,1fr);}
+    header{padding:52px 6vw 0;}
+    .section{padding:0 6vw 64px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Caso de estudio — identidad protegida bajo NDA</div>
+  <h1>Lo que llaman <em>rebranding</em>, ejecutado por una sola persona en nueve semanas.</h1>
+  <p class="subtitle">Naming, identidad visual, narrativa de marca, arquitectura web y producción de contenido — sin agencia, sin equipo, con un solo criterio estratégico de principio a fin.</p>
+
+  <div class="stat-ribbon">
+    <div class="stat reveal"><div class="num">9</div><div class="label">semanas</div></div>
+    <div class="stat reveal"><div class="num">9</div><div class="label">disciplinas cubiertas</div></div>
+    <div class="stat reveal"><div class="num">1</div><div class="label">persona al mando</div></div>
+    <div class="stat reveal"><div class="num">0</div><div class="label">handoffs perdidos</div></div>
+  </div>
+</header>
+
+<section class="thesis reveal">
+  <p>El cliente: una plataforma de infraestructura digital B2B en proceso de cambio de marca por conflicto legal de naming. El encargo: resolver naming, identidad, narrativa y lanzamiento de sitio web — en paralelo a otros proyectos activos, sin equipo dedicado.</p>
+  <div class="thesis-credit">— los detalles del cliente están protegidos por confidencialidad. El proceso, no.</div>
+</section>
+
+<section class="section">
+  <div class="section-label reveal">El sistema</div>
+  <h2 class="reveal">Esto no fue un proyecto de marca. Fue una operación de equipo completo, sostenida por una persona.</h2>
+  <p class="section-intro reveal">Cada bloque normalmente tiene un especialista distinto detrás. Aquí, el mismo criterio estratégico atravesó los nueve roles — evitando el problema más común del rebranding por comité: que cada pieza quede bien sola y mal conectada con las demás.</p>
+
+  <div class="system-grid">
+    <div class="system-cell reveal">
+      <span class="role">Brand Strategist</span>
+      <h3>Cuestionario ejecutivo de definición de marca</h3>
+      <p>Cinco preguntas diseñadas para extraer narrativa, posicionamiento y criterios de naming directamente de la dirección — no para que una agencia adivinara.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Naming</span>
+      <h3>De +40 candidatos a un nombre legalmente limpio</h3>
+      <p>Verificación de disponibilidad legal y de dominio candidato por candidato, hasta aislar la única opción libre de conflicto.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Visual Identity</span>
+      <h3>Estrategia cromática con respaldo académico</h3>
+      <p>Decisión de paleta basada en teoría de congruencia marca-color, no en gusto — con riesgo de cambio de marca evaluado de forma explícita.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Brand Narrative</span>
+      <h3>Resolución de una tensión de posicionamiento</h3>
+      <p>El brand book decía una cosa y la lógica narrativa apuntaba a otra. Se resolvió la tensión en vez de ignorarla, dejando que el rol emergiera del comportamiento, no de la declaración.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Producción de video</span>
+      <h3>Evaluación de proveedores + control de guion</h3>
+      <p>Comparación de portfolios para el video corporativo del lanzamiento, con revisión línea por línea del guion contra la locución final.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Web Architecture</span>
+      <h3>Arquitectura multi-país y multi-idioma</h3>
+      <p>Siete secciones, subpáginas por país, estructura bilingüe — documentada para que un desarrollador externo pudiera ejecutarla sin ambigüedad.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Dev / Front-end</span>
+      <h3>Herramienta de intake de contenido, en producción</h3>
+      <p>Formulario interactivo con autoguardado, desplegado en la nube, para que la dirección del cliente completara el copy del sitio de forma independiente.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">SEO / GEO</span>
+      <h3>Capa de descubribilidad por motores de IA</h3>
+      <p>Plantilla de optimización GEO/AEO desplegada con el mismo flujo técnico, anticipando que el tráfico relevante cada vez pasa más por IA que por buscadores clásicos.</p>
+    </div>
+    <div class="system-cell reveal">
+      <span class="role">Applied Design</span>
+      <h3>Pieza de transición visual para el anuncio</h3>
+      <p>Diseño que comunica la transición de marca sin perder continuidad frente al ecosistema que ya conocía la marca anterior.</p>
+    </div>
+  </div>
+
+  <div class="system-foot reveal">→ 9 disciplinas distintas. 1 criterio. 0 traducciones perdidas entre equipos.</div>
+</section>
+
+<section class="section">
+  <div class="section-label reveal">El registro</div>
+  <h2 class="reveal">Cómo se vio realmente, semana a semana.</h2>
+  <p class="section-intro reveal">No es una lista de tareas. Es la secuencia de decisiones — qué se eligió, qué se descartó y por qué — que normalmente queda invisible en un case study pulido. Toca cada entrada para ver el criterio detrás.</p>
+
+  <div class="log-wrap reveal" id="logWrap">
+    <div class="log-line" id="logLine"></div>
+
+    <div class="log-entry" data-i="1">
+      <div class="log-date">SEMANA 1 <span class="tagtype">ESTRATEGIA</span></div>
+      <h4>Cuestionario ejecutivo de definición de marca <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Se mapeó cada pregunta a un bloque estratégico (narrativa, posicionamiento, criterios de naming, límites de crecimiento) en vez de hacer una lista genérica. <b>Decisión clave:</b> identificar el conflicto de naming existente como el input más urgente — no un detalle secundario.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="2">
+      <div class="log-date">SEMANA 2 <span class="tagtype">NAMING</span></div>
+      <h4>De +40 candidatos a un nombre legalmente limpio <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Cada nombre pasó por verificación de empresa existente y dominio. <b>Resultado:</b> de seis finalistas con buena lógica semántica, solo uno estaba completamente libre de conflicto legal y de marca.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="3">
+      <div class="log-date">SEMANA 3 <span class="tagtype">COLOR</span></div>
+      <h4>Decisión cromática con evidencia, no con gusto <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Se evaluaron dos escenarios — mantener la paleta original o virar a algo más institucional — citando teoría de congruencia marca-color y patrones del sector. <b>Recomendación no neutral:</b> base oscura dominante con un acento controlado, preservando algo de equity de la marca anterior sin heredar su problema de percepción B2B.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="4">
+      <div class="log-date">SEMANA 5 <span class="tagtype">IDENTIDAD</span></div>
+      <h4>Brand Book + Toolkit Ejecutivo <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Auditoría del brand book detectó valores faltantes y una decisión de arquitectura sin resolver. Se construyó después un toolkit ejecutivo completo manteniendo exactamente el mismo look & feel ya aprobado — sin reinventar lo que ya funcionaba.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="5">
+      <div class="log-date">SEMANA 6 <span class="tagtype">NARRATIVA</span></div>
+      <h4>Resolver la tensión, no esconderla <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>El brand book decía explícitamente que la marca no se autodefine en un rol que, sin embargo, toda la lógica narrativa sugería. <b>Llamada estratégica:</b> dejar que el rol emerja del comportamiento del ecosistema, no de la declaración propia. Se colapsaron cuatro sinónimos de estabilidad en un solo concepto ancla.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="6">
+      <div class="log-date">SEMANA 7 <span class="tagtype">VIDEO</span></div>
+      <h4>Control de calidad sobre el guion del lanzamiento <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Revisión del guion del video de aniversario y anuncio de rebranding contra el audio grabado, asegurando que la locución final respetara el tono aprobado — no una interpretación libre del locutor.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="7">
+      <div class="log-date">SEMANA 8 <span class="tagtype">EVENTO</span></div>
+      <h4>Evaluación de proveedores para el lanzamiento <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Comparación de dos proveedores de video por calidad de portfolio, con recomendación final fundamentada para la pieza del evento corporativo.</p>
+      </div>
+    </div>
+
+    <div class="log-entry" data-i="8">
+      <div class="log-date">SEMANA 9 <span class="tagtype">WEB + DEV + SEO</span></div>
+      <h4>Arquitectura, intake y capa GEO — en paralelo <span class="chev">▸</span></h4>
+      <div class="log-detail">
+        <p>Documento de arquitectura para sitio multi-país/multi-idioma, seguido de un formulario interactivo desplegado en la nube para que la dirección completara el copy del sitio cada uno por su lado, sin backend ni fricción. La capa GEO/AEO se desplegó con el mismo flujo técnico, en paralelo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-label reveal">Lo que esto demuestra</div>
+  <h2 class="reveal">No es un caso de "hice muchas cosas". Es evidencia de cuatro competencias concretas.</h2>
+
+  <div class="competency-grid reveal">
+    <div class="competency-card">
+      <span class="ck">01 / Rango</span>
+      <h3>Estrategia, diseño, copy y desarrollo bajo un solo criterio</h3>
+      <p>Naming, identidad visual, narrativa, arquitectura web y SEO no fueron entregables sueltos de distintos proveedores. Fueron decisiones de la misma persona, conectadas desde el día uno — sin la pérdida de coherencia típica del rebranding por comité.</p>
+    </div>
+    <div class="competency-card">
+      <span class="ck">02 / Velocidad</span>
+      <h3>Ciclo completo de marca a lanzamiento en 9 semanas</h3>
+      <p>Lo que normalmente toma un trimestre con agencia — kickoff, research, propuestas, rondas de feedback — se ejecutó en paralelo a otros proyectos activos, sin sacrificar el rigor de cada fase.</p>
+    </div>
+    <div class="competency-card">
+      <span class="ck">03 / Criterio bajo ambigüedad</span>
+      <h3>Decisiones con evidencia, defendidas frente al cliente</h3>
+      <p>La paleta se decidió con teoría de congruencia marca-color, no con gusto. La tensión entre el brand book y la narrativa no se escondió: se resolvió y se explicó por qué.</p>
+    </div>
+    <div class="competency-card">
+      <span class="ck">04 / Autonomía operativa</span>
+      <h3>De la estrategia al deploy técnico, sin depender de terceros</h3>
+      <p>El mismo flujo que diseñó la arquitectura del sitio construyó y publicó la herramienta de intake de contenido y la capa de optimización para IA — sin esperar a un equipo de desarrollo externo.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Busco mi próximo rol como Marketing Director en infraestructura digital, telecom o tech B2B.</h2>
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/andreasaraviasauter/" target="_blank">Conectemos en LinkedIn</a>
+    <a class="btn btn-secondary" href="mailto:sarauter@gmail.com">Escríbeme</a>
+  </div>
+</div>
+
+<footer>
+  <div>Andrea Saravia Sauter — SARAUTER Marketing · Madrid</div>
+  <div>Identidad del cliente protegida bajo confidencialidad</div>
+</footer>
+
+<script>
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // draw the log line once the log section is in view
+  const logWrap = document.getElementById('logWrap');
+  const logLine = document.getElementById('logLine');
+  const lineObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        logLine.style.height = (logWrap.offsetHeight - 12) + 'px';
+        lineObserver.disconnect();
+      }
+    });
+  }, {threshold:0.1});
+  lineObserver.observe(logWrap);
+
+  // expandable log entries
+  document.querySelectorAll('.log-entry').forEach(entry=>{
+    entry.addEventListener('click', ()=>{
+      entry.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
