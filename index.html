@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sistema de marca B2B en 9 semanas | Andrea Saravia Sauter</title>
-<link rel="canonical" href="https://sarauter.com/Branding-successful-case-LD/">
+<link rel="canonical" href="https://sarauter.com/Branding-successful-case/">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://sarauter.com/Branding-successful-case-LD/">
+<meta property="og:url" content="https://sarauter.com/Branding-successful-case/">
 <meta property="og:site_name" content="SARAUTER">
 <meta property="og:title" content="Un rebranding completo, por una sola persona, en nueve semanas">
 <meta property="og:description" content="Cómo una sola Marketing Director ejecutó, sin equipo, lo que normalmente requiere una agencia completa: naming, identidad visual, narrativa, web y producción.">
@@ -102,7 +102,7 @@
     font-size: 11.5px; color: rgba(255,255,255,0.4);
     letter-spacing: 0.06em; text-transform: uppercase; font-weight: 400;
   }
-  .topbar-right { margin-left: auto; }
+  .topbar-right { margin-left: auto; display: flex; align-items: center; gap: 10px; }
   .topbar-pill {
     background: rgba(179,136,255,0.15);
     color: var(--lilac-400);
@@ -110,6 +110,18 @@
     font-size: 11px; padding: 3px 10px; border-radius: 20px;
     font-weight: 500; letter-spacing: 0.03em;
   }
+  .lang-toggle {
+    color: rgba(255,255,255,0.55);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    background: none;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2px 4px;
+  }
+  .lang-toggle:hover { color: #fff; }
 
   /* ── HERO ── */
   .hero {
@@ -349,97 +361,98 @@
   <div class="topbar-divider"></div>
   <div class="topbar-sub">Case Study</div>
   <div class="topbar-right">
-    <span class="topbar-pill">Identidad del cliente bajo NDA</span>
+    <span class="topbar-pill" data-i18n="topbar-pill">Identidad del cliente bajo NDA</span>
+    <button class="lang-toggle" id="lang-toggle" type="button">EN</button>
   </div>
 </div>
 
 <section class="hero">
-  <h1>Un <span class="hl">rebranding</span>, ejecutado por una sola persona en nueve semanas.</h1>
-  <p class="subtitle">Naming, identidad visual, narrativa de marca, arquitectura web y producción de contenido — sin agencia, sin equipo, con un solo criterio estratégico de principio a fin.</p>
+  <h1 data-i18n="hero-h1">Un <span class="hl">rebranding</span>, ejecutado por una sola persona en nueve semanas.</h1>
+  <p class="subtitle" data-i18n="hero-sub">Naming, identidad visual, narrativa de marca, arquitectura web y producción de contenido — sin agencia, sin equipo, con un solo criterio estratégico de principio a fin.</p>
 
   <div class="stats-row">
-    <div class="stat-card reveal"><div class="stat-num">9</div><div class="stat-lbl">semanas</div></div>
-    <div class="stat-card reveal"><div class="stat-num">9</div><div class="stat-lbl">disciplinas cubiertas</div></div>
-    <div class="stat-card reveal"><div class="stat-num">1</div><div class="stat-lbl">persona al mando</div></div>
-    <div class="stat-card reveal"><div class="stat-num">0</div><div class="stat-lbl">handoffs perdidos</div></div>
+    <div class="stat-card reveal"><div class="stat-num">9</div><div class="stat-lbl" data-i18n="stat-1">semanas</div></div>
+    <div class="stat-card reveal"><div class="stat-num">9</div><div class="stat-lbl" data-i18n="stat-2">disciplinas cubiertas</div></div>
+    <div class="stat-card reveal"><div class="stat-num">1</div><div class="stat-lbl" data-i18n="stat-3">persona al mando</div></div>
+    <div class="stat-card reveal"><div class="stat-num">0</div><div class="stat-lbl" data-i18n="stat-4">handoffs perdidos</div></div>
   </div>
 </section>
 <div class="hero-spacer"></div>
 
 <section class="thesis reveal">
-  <p>El cliente: una plataforma de infraestructura digital B2B ante la necesidad de renombrar la marca. El encargo: resolver naming, identidad, narrativa y lanzamiento de sitio web — en paralelo a otros proyectos activos, sin equipo dedicado.</p>
-  <div class="thesis-credit">— los detalles del cliente están protegidos por confidencialidad. El proceso, no.</div>
+  <p data-i18n="thesis-p">El cliente: una plataforma de infraestructura digital B2B ante la necesidad de renombrar la marca. El encargo: resolver naming, identidad, narrativa y lanzamiento de sitio web — en paralelo a otros proyectos activos, sin equipo dedicado.</p>
+  <div class="thesis-credit" data-i18n="thesis-credit">— los detalles del cliente están protegidos por confidencialidad. El proceso, no.</div>
 </section>
 
 <section class="section">
-  <div class="section-eyebrow reveal">El sistema</div>
-  <h2 class="reveal">Esto no fue un proyecto de marca. Fue una operación de equipo completo, sostenida por una persona.</h2>
-  <p class="section-intro reveal">Cada bloque normalmente tiene un especialista distinto detrás. Aquí, el mismo criterio estratégico atravesó los nueve roles — evitando el problema más común del rebranding por comité: que cada pieza quede bien sola y mal conectada con las demás.</p>
+  <div class="section-eyebrow reveal" data-i18n="sys-eyebrow">El sistema</div>
+  <h2 class="reveal" data-i18n="sys-h2">Esto no fue un proyecto de marca. Fue una operación de equipo completo, sostenida por una persona.</h2>
+  <p class="section-intro reveal" data-i18n="sys-intro">Cada bloque normalmente tiene un especialista distinto detrás. Aquí, el mismo criterio estratégico atravesó los nueve roles — evitando el problema más común del rebranding por comité: que cada pieza quede bien sola y mal conectada con las demás.</p>
 
   <div class="system-grid">
     <div class="system-card reveal">
       <span class="role">Brand Strategist</span>
-      <h3>Cuestionario ejecutivo de definición de marca</h3>
-      <p>Cinco preguntas diseñadas para extraer narrativa, posicionamiento y criterios de naming directamente de la dirección — no para que una agencia adivinara.</p>
+      <h3 data-i18n="card1-h">Cuestionario ejecutivo de definición de marca</h3>
+      <p data-i18n="card1-p">Cinco preguntas diseñadas para extraer narrativa, posicionamiento y criterios de naming directamente de la dirección — no para que una agencia adivinara.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Naming</span>
-      <h3>De +40 candidatos a un nombre legalmente limpio</h3>
-      <p>Verificación de disponibilidad legal y de dominio candidato por candidato, hasta aislar la única opción libre de conflicto.</p>
+      <h3 data-i18n="card2-h">De +40 candidatos a un nombre legalmente limpio</h3>
+      <p data-i18n="card2-p">Verificación de disponibilidad legal y de dominio candidato por candidato, hasta aislar la única opción libre de conflicto.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Visual Identity</span>
-      <h3>Estrategia cromática con respaldo académico</h3>
-      <p>Decisión de paleta basada en teoría de congruencia marca-color, no en gusto — con riesgo de cambio de marca evaluado de forma explícita.</p>
+      <h3 data-i18n="card3-h">Estrategia cromática con respaldo académico</h3>
+      <p data-i18n="card3-p">Decisión de paleta basada en teoría de congruencia marca-color, no en gusto — con riesgo de cambio de marca evaluado de forma explícita.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Brand Narrative</span>
-      <h3>Resolución de una tensión de posicionamiento</h3>
-      <p>El brand book decía una cosa y la lógica narrativa apuntaba a otra. Se resolvió la tensión en vez de ignorarla, dejando que el rol emergiera del comportamiento, no de la declaración.</p>
+      <h3 data-i18n="card4-h">Resolución de una tensión de posicionamiento</h3>
+      <p data-i18n="card4-p">El brand book decía una cosa y la lógica narrativa apuntaba a otra. Se resolvió la tensión en vez de ignorarla, dejando que el rol emergiera del comportamiento, no de la declaración.</p>
     </div>
     <div class="system-card reveal">
-      <span class="role">Producción de video</span>
-      <h3>Evaluación de proveedores + control de guion</h3>
-      <p>Comparación de portfolios para el video corporativo del lanzamiento, con revisión línea por línea del guion contra la locución final.</p>
+      <span class="role">Video Production</span>
+      <h3 data-i18n="card5-h">Evaluación de proveedores + control de guion</h3>
+      <p data-i18n="card5-p">Comparación de portfolios para el video corporativo del lanzamiento, con revisión línea por línea del guion contra la locución final.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Web Architecture</span>
-      <h3>Arquitectura multi-país y multi-idioma</h3>
-      <p>Siete secciones, subpáginas por país, estructura bilingüe — documentada para que un desarrollador externo pudiera ejecutarla sin ambigüedad.</p>
+      <h3 data-i18n="card6-h">Arquitectura multi-país y multi-idioma</h3>
+      <p data-i18n="card6-p">Siete secciones, subpáginas por país, estructura bilingüe — documentada para que un desarrollador externo pudiera ejecutarla sin ambigüedad.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Dev / Front-end</span>
-      <h3>Herramienta de intake de contenido, en producción</h3>
-      <p>Formulario interactivo con autoguardado, desplegado en la nube, para que la dirección del cliente completara el copy del sitio de forma independiente.</p>
+      <h3 data-i18n="card7-h">Herramienta de intake de contenido, en producción</h3>
+      <p data-i18n="card7-p">Formulario interactivo con autoguardado, desplegado en la nube, para que la dirección del cliente completara el copy del sitio de forma independiente.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">SEO / GEO</span>
-      <h3>Capa de descubribilidad por motores de IA</h3>
-      <p>Plantilla de optimización GEO/AEO desplegada con el mismo flujo técnico, anticipando que el tráfico relevante cada vez pasa más por IA que por buscadores clásicos.</p>
+      <h3 data-i18n="card8-h">Capa de descubribilidad por motores de IA</h3>
+      <p data-i18n="card8-p">Plantilla de optimización GEO/AEO desplegada con el mismo flujo técnico, anticipando que el tráfico relevante cada vez pasa más por IA que por buscadores clásicos.</p>
     </div>
     <div class="system-card reveal">
       <span class="role">Applied Design</span>
-      <h3>Pieza de transición visual para el anuncio</h3>
-      <p>Diseño que comunica la transición de marca sin perder continuidad frente al ecosistema que ya conocía la marca anterior.</p>
+      <h3 data-i18n="card9-h">Pieza de transición visual para el anuncio</h3>
+      <p data-i18n="card9-p">Diseño que comunica la transición de marca sin perder continuidad frente al ecosistema que ya conocía la marca anterior.</p>
     </div>
   </div>
 
-  <div class="system-foot reveal">→ 9 disciplinas distintas. 1 criterio. 0 traducciones perdidas entre equipos.</div>
+  <div class="system-foot reveal" data-i18n="sys-foot">→ 9 disciplinas distintas. 1 criterio. 0 traducciones perdidas entre equipos.</div>
 </section>
 
 <section class="section">
-  <div class="section-eyebrow reveal">El registro</div>
-  <h2 class="reveal">Cómo se vio realmente, semana a semana.</h2>
-  <p class="section-intro reveal">No es una lista de tareas. Es la secuencia de decisiones — qué se eligió, qué se descartó y por qué. Toca cada entrada para ver el criterio detrás.</p>
+  <div class="section-eyebrow reveal" data-i18n="log-eyebrow">El registro</div>
+  <h2 class="reveal" data-i18n="log-h2">Cómo se vio realmente, semana a semana.</h2>
+  <p class="section-intro reveal" data-i18n="log-intro">No es una lista de tareas. Es la secuencia de decisiones — qué se eligió, qué se descartó y por qué. Toca cada entrada para ver el criterio detrás.</p>
 
   <div class="log-list reveal" id="logWrap">
 
     <div class="log-entry" data-i="1">
       <div class="log-num">1</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 1</span><span class="log-tag">ESTRATEGIA</span>
-        <h4>Cuestionario ejecutivo de definición de marca <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Se mapeó cada pregunta a un bloque estratégico (narrativa, posicionamiento, criterios de naming, límites de crecimiento) en vez de hacer una lista genérica. <b>Decisión clave:</b> identificar el conflicto de naming existente como el input más urgente — no un detalle secundario.</p></div>
+        <span class="log-week" data-i18n="log1-w">SEMANA 1</span><span class="log-tag" data-i18n="log1-t">ESTRATEGIA</span>
+        <h4><span data-i18n="log1-h">Cuestionario ejecutivo de definición de marca</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log1-d">Se mapeó cada pregunta a un bloque estratégico (narrativa, posicionamiento, criterios de naming, límites de crecimiento) en vez de hacer una lista genérica. <b>Decisión clave:</b> identificar el conflicto de naming existente como el input más urgente — no un detalle secundario.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -447,9 +460,9 @@
     <div class="log-entry" data-i="2">
       <div class="log-num">2</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 2</span><span class="log-tag">NAMING</span>
-        <h4>De +40 candidatos a un nombre legalmente limpio <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Cada nombre pasó por verificación de empresa existente y dominio. <b>Resultado:</b> de seis finalistas con buena lógica semántica, solo uno estaba completamente libre de conflicto legal y de marca.</p></div>
+        <span class="log-week" data-i18n="log2-w">SEMANA 2</span><span class="log-tag" data-i18n="log2-t">NAMING</span>
+        <h4><span data-i18n="log2-h">De +40 candidatos a un nombre legalmente limpio</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log2-d">Cada nombre pasó por verificación de empresa existente y dominio. <b>Resultado:</b> de seis finalistas con buena lógica semántica, solo uno estaba completamente libre de conflicto legal y de marca.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -457,9 +470,9 @@
     <div class="log-entry" data-i="3">
       <div class="log-num">3</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 3</span><span class="log-tag">COLOR</span>
-        <h4>Decisión cromática con evidencia, no con gusto <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Se evaluaron dos escenarios — mantener la paleta original o virar a algo más institucional — citando teoría de congruencia marca-color y patrones del sector. <b>Recomendación no neutral:</b> base oscura dominante con un acento controlado, preservando algo de equity de la marca anterior sin heredar su problema de percepción B2B.</p></div>
+        <span class="log-week" data-i18n="log3-w">SEMANA 3</span><span class="log-tag" data-i18n="log3-t">COLOR</span>
+        <h4><span data-i18n="log3-h">Decisión cromática con evidencia, no con gusto</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log3-d">Se evaluaron dos escenarios — mantener la paleta original o virar a algo más institucional — citando teoría de congruencia marca-color y patrones del sector. <b>Recomendación no neutral:</b> base oscura dominante con un acento controlado, preservando algo de equity de la marca anterior sin heredar su problema de percepción B2B.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -467,9 +480,9 @@
     <div class="log-entry" data-i="4">
       <div class="log-num">4</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 5</span><span class="log-tag">IDENTIDAD</span>
-        <h4>Brand Book + Toolkit Ejecutivo <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Auditoría del brand book detectó valores faltantes y una decisión de arquitectura sin resolver. Se construyó después un toolkit ejecutivo completo manteniendo exactamente el mismo look & feel ya aprobado — sin reinventar lo que ya funcionaba.</p></div>
+        <span class="log-week" data-i18n="log4-w">SEMANA 5</span><span class="log-tag" data-i18n="log4-t">IDENTIDAD</span>
+        <h4><span data-i18n="log4-h">Brand Book + Toolkit Ejecutivo</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log4-d">Auditoría del brand book detectó valores faltantes y una decisión de arquitectura sin resolver. Se construyó después un toolkit ejecutivo completo manteniendo exactamente el mismo look & feel ya aprobado — sin reinventar lo que ya funcionaba.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -477,9 +490,9 @@
     <div class="log-entry" data-i="5">
       <div class="log-num">5</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 6</span><span class="log-tag">NARRATIVA</span>
-        <h4>Resolver la tensión, no esconderla <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>El brand book decía explícitamente que la marca no se autodefine en un rol que, sin embargo, toda la lógica narrativa sugería. <b>Llamada estratégica:</b> dejar que el rol emerja del comportamiento del ecosistema, no de la declaración propia. Se colapsaron cuatro sinónimos de estabilidad en un solo concepto ancla.</p></div>
+        <span class="log-week" data-i18n="log5-w">SEMANA 6</span><span class="log-tag" data-i18n="log5-t">NARRATIVA</span>
+        <h4><span data-i18n="log5-h">Resolver la tensión, no esconderla</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log5-d">El brand book decía explícitamente que la marca no se autodefine en un rol que, sin embargo, toda la lógica narrativa sugería. <b>Llamada estratégica:</b> dejar que el rol emerja del comportamiento del ecosistema, no de la declaración propia. Se colapsaron cuatro sinónimos de estabilidad en un solo concepto ancla.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -487,9 +500,9 @@
     <div class="log-entry" data-i="6">
       <div class="log-num">6</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 7</span><span class="log-tag">VIDEO</span>
-        <h4>Control de calidad sobre el guion del lanzamiento <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Revisión del guion del video de aniversario y anuncio de rebranding contra el audio grabado, asegurando que la locución final respetara el tono aprobado — no una interpretación libre del locutor.</p></div>
+        <span class="log-week" data-i18n="log6-w">SEMANA 7</span><span class="log-tag" data-i18n="log6-t">VIDEO</span>
+        <h4><span data-i18n="log6-h">Control de calidad sobre el guion del lanzamiento</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log6-d">Revisión del guion del video de aniversario y anuncio de rebranding contra el audio grabado, asegurando que la locución final respetara el tono aprobado — no una interpretación libre del locutor.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -497,9 +510,9 @@
     <div class="log-entry" data-i="7">
       <div class="log-num">7</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 8</span><span class="log-tag">EVENTO</span>
-        <h4>Evaluación de proveedores para el lanzamiento <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Comparación de dos proveedores de video por calidad de portfolio, con recomendación final fundamentada para la pieza del evento corporativo.</p></div>
+        <span class="log-week" data-i18n="log7-w">SEMANA 8</span><span class="log-tag" data-i18n="log7-t">EVENTO</span>
+        <h4><span data-i18n="log7-h">Evaluación de proveedores para el lanzamiento</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log7-d">Comparación de dos proveedores de video por calidad de portfolio, con recomendación final fundamentada para la pieza del evento corporativo.</p></div>
       </div>
     </div>
     <div class="log-divider"></div>
@@ -507,9 +520,9 @@
     <div class="log-entry" data-i="8">
       <div class="log-num">8</div>
       <div class="log-body">
-        <span class="log-week">SEMANA 9</span><span class="log-tag">WEB + DEV + SEO</span>
-        <h4>Arquitectura, intake y capa GEO — en paralelo <span class="chev">▸</span></h4>
-        <div class="log-detail"><p>Documento de arquitectura para sitio multi-país/multi-idioma, seguido de un formulario interactivo desplegado en la nube para que la dirección completara el copy del sitio cada uno por su lado, sin backend ni fricción. La capa GEO/AEO se desplegó con el mismo flujo técnico, en paralelo.</p></div>
+        <span class="log-week" data-i18n="log8-w">SEMANA 9</span><span class="log-tag" data-i18n="log8-t">WEB + DEV + SEO</span>
+        <h4><span data-i18n="log8-h">Arquitectura, intake y capa GEO — en paralelo</span> <span class="chev">▸</span></h4>
+        <div class="log-detail"><p data-i18n="log8-d">Documento de arquitectura para sitio multi-país/multi-idioma, seguido de un formulario interactivo desplegado en la nube para que la dirección completara el copy del sitio cada uno por su lado, sin backend ni fricción. La capa GEO/AEO se desplegó con el mismo flujo técnico, en paralelo.</p></div>
       </div>
     </div>
 
@@ -517,46 +530,46 @@
 </section>
 
 <section class="section">
-  <div class="section-eyebrow reveal">Lo que esto demuestra</div>
-  <h2 class="reveal">No es un caso de "hice muchas cosas". Es evidencia de cuatro competencias concretas.</h2>
+  <div class="section-eyebrow reveal" data-i18n="comp-eyebrow">Lo que esto demuestra</div>
+  <h2 class="reveal" data-i18n="comp-h2">No es un caso de "hice muchas cosas". Es evidencia de cuatro competencias concretas.</h2>
 
   <div class="competency-grid reveal">
     <div class="competency-card">
-      <span class="ck">01 / Rango</span>
-      <h3>Estrategia, diseño, copy y desarrollo bajo un solo criterio</h3>
-      <p>Naming, identidad visual, narrativa, arquitectura web y SEO no fueron entregables sueltos de distintos proveedores. Fueron decisiones de la misma persona, conectadas desde el día uno — sin la pérdida de coherencia típica del rebranding por comité.</p>
+      <span class="ck" data-i18n="comp1-k">01 / Rango</span>
+      <h3 data-i18n="comp1-h">Estrategia, diseño, copy y desarrollo bajo un solo criterio</h3>
+      <p data-i18n="comp1-p">Naming, identidad visual, narrativa, arquitectura web y SEO no fueron entregables sueltos de distintos proveedores. Fueron decisiones de la misma persona, conectadas desde el día uno — sin la pérdida de coherencia típica del rebranding por comité.</p>
     </div>
     <div class="competency-card">
-      <span class="ck">02 / Velocidad</span>
-      <h3>Ciclo completo de marca a lanzamiento en 9 semanas</h3>
-      <p>Lo que normalmente toma un trimestre con agencia — kickoff, research, propuestas, rondas de feedback — se ejecutó en paralelo a otros proyectos activos, sin sacrificar el rigor de cada fase.</p>
+      <span class="ck" data-i18n="comp2-k">02 / Velocidad</span>
+      <h3 data-i18n="comp2-h">Ciclo completo de marca a lanzamiento en 9 semanas</h3>
+      <p data-i18n="comp2-p">Lo que normalmente toma un trimestre con agencia — kickoff, research, propuestas, rondas de feedback — se ejecutó en paralelo a otros proyectos activos, sin sacrificar el rigor de cada fase.</p>
     </div>
     <div class="competency-card">
-      <span class="ck">03 / Criterio bajo ambigüedad</span>
-      <h3>Decisiones con evidencia, defendidas frente al cliente</h3>
-      <p>La paleta se decidió con teoría de congruencia marca-color, no con gusto. La tensión entre el brand book y la narrativa no se escondió: se resolvió y se explicó por qué.</p>
+      <span class="ck" data-i18n="comp3-k">03 / Criterio bajo ambigüedad</span>
+      <h3 data-i18n="comp3-h">Decisiones con evidencia, defendidas frente al cliente</h3>
+      <p data-i18n="comp3-p">La paleta se decidió con teoría de congruencia marca-color, no con gusto. La tensión entre el brand book y la narrativa no se escondió: se resolvió y se explicó por qué.</p>
     </div>
     <div class="competency-card">
-      <span class="ck">04 / Autonomía operativa</span>
-      <h3>De la estrategia al deploy técnico, sin depender de terceros</h3>
-      <p>El mismo flujo que diseñó la arquitectura del sitio construyó y publicó la herramienta de intake de contenido y la capa de optimización para IA — sin esperar a un equipo de desarrollo externo.</p>
+      <span class="ck" data-i18n="comp4-k">04 / Autonomía operativa</span>
+      <h3 data-i18n="comp4-h">De la estrategia al deploy técnico, sin depender de terceros</h3>
+      <p data-i18n="comp4-p">El mismo flujo que diseñó la arquitectura del sitio construyó y publicó la herramienta de intake de contenido y la capa de optimización para IA — sin esperar a un equipo de desarrollo externo.</p>
     </div>
   </div>
 </section>
 
 <div class="cta-wrap">
   <div class="cta-banner">
-    <h2>Busco mi próximo rol como Marketing Director en infraestructura digital, telecom o tech B2B.</h2>
+    <h2 data-i18n="cta-h2">Busco mi próximo rol como Marketing Director en infraestructura digital, telecom o tech B2B.</h2>
     <div class="cta-buttons">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/andreasaraviasauter/" target="_blank">Conectemos en LinkedIn</a>
-      <a class="btn btn-secondary" href="mailto:sarauter@gmail.com">Escríbeme</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/andreasaraviasauter/" target="_blank" data-i18n="cta-linkedin">Conectemos en LinkedIn</a>
+      <a class="btn btn-secondary" href="mailto:sarauter@gmail.com" data-i18n="cta-mail">Escríbeme</a>
     </div>
   </div>
 </div>
 
 <footer>
   <div>Andrea Saravia Sauter — SARAUTER Marketing · Madrid</div>
-  <div>Identidad del cliente protegida bajo confidencialidad</div>
+  <div data-i18n="footer-nda">Identidad del cliente protegida bajo confidencialidad</div>
 </footer>
 
 <script>
@@ -569,6 +582,161 @@
   document.querySelectorAll('.log-entry').forEach(entry=>{
     entry.addEventListener('click', ()=>{ entry.classList.toggle('open'); });
   });
+</script>
+
+<script>
+  /* ── Idioma: el HTML está en ES; este diccionario lo pasa a EN.
+     Usa la misma clave de localStorage que sarauter.com, así el idioma
+     elegido en la web principal se mantiene al entrar aquí. ── */
+  var I18N_EN = {
+    "topbar-pill": "Client identity under NDA",
+
+    "hero-h1": "A full <span class=\"hl\">rebrand</span>, delivered by one person in nine weeks.",
+    "hero-sub": "Naming, visual identity, brand narrative, web architecture and content production — no agency, no team, one strategic point of view from start to finish.",
+    "stat-1": "weeks",
+    "stat-2": "disciplines covered",
+    "stat-3": "person in charge",
+    "stat-4": "handoffs lost",
+
+    "thesis-p": "The client: a B2B digital infrastructure platform that had to rename itself. The brief: settle naming, identity, narrative and the website launch — alongside other live projects, with no dedicated team.",
+    "thesis-credit": "— the client's details are protected by confidentiality. The process isn't.",
+
+    "sys-eyebrow": "The system",
+    "sys-h2": "This wasn't a branding project. It was a full-team operation, carried by one person.",
+    "sys-intro": "Each block below is normally a different specialist's job. Here, one strategic point of view ran through all nine roles — avoiding the classic failure of rebranding by committee: every piece works on its own, and none of them fit together.",
+
+    "card1-h": "Executive brand definition questionnaire",
+    "card1-p": "Five questions built to pull narrative, positioning and naming criteria straight from the leadership team — rather than leaving an agency to guess.",
+    "card2-h": "From 40+ candidates to one legally clean name",
+    "card2-p": "Legal and domain availability checked name by name, until a single conflict-free option was left standing.",
+    "card3-h": "Color strategy backed by research",
+    "card3-p": "The palette was chosen on brand–color congruence theory rather than taste — with the risk of the shift assessed explicitly.",
+    "card4-h": "Resolving a positioning tension",
+    "card4-p": "The brand book said one thing; the narrative logic pointed somewhere else. The tension was resolved instead of ignored, letting the role emerge from behavior rather than from a statement.",
+    "card5-h": "Vendor evaluation + script control",
+    "card5-p": "Portfolios compared for the launch corporate video, with the script reviewed line by line against the final voice-over.",
+    "card6-h": "Multi-country, multi-language architecture",
+    "card6-p": "Seven sections, country subpages, bilingual structure — documented so an external developer could build it without guesswork.",
+    "card7-h": "Content intake tool, shipped to production",
+    "card7-p": "An interactive form with autosave, deployed to the cloud, so the client's leadership could complete the site copy on their own.",
+    "card8-h": "Discoverability layer for AI engines",
+    "card8-p": "A GEO/AEO optimization template shipped through the same technical pipeline, on the read that relevant traffic increasingly arrives through AI rather than classic search.",
+    "card9-h": "Visual transition piece for the announcement",
+    "card9-p": "A design that signals the brand change without losing continuity for an ecosystem that already knew the old name.",
+    "sys-foot": "→ 9 separate disciplines. 1 point of view. 0 meaning lost in the handoff between teams.",
+
+    "log-eyebrow": "The log",
+    "log-h2": "What it actually looked like, week by week.",
+    "log-intro": "Not a task list. The sequence of decisions — what was chosen, what was dropped and why. Tap any entry to see the reasoning behind it.",
+
+    "log1-w": "WEEK 1",
+    "log1-t": "STRATEGY",
+    "log1-h": "Executive brand definition questionnaire",
+    "log1-d": "Every question was mapped to a strategic block (narrative, positioning, naming criteria, growth limits) instead of running a generic list. <b>Key decision:</b> treating the existing naming conflict as the most urgent input — not a side detail.",
+
+    "log2-w": "WEEK 2",
+    "log2-t": "NAMING",
+    "log2-h": "From 40+ candidates to one legally clean name",
+    "log2-d": "Each name was checked against existing companies and domains. <b>Result:</b> of six finalists with solid semantic logic, only one came out entirely free of legal and trademark conflict.",
+
+    "log3-w": "WEEK 3",
+    "log3-t": "COLOR",
+    "log3-h": "A color decision made on evidence, not taste",
+    "log3-d": "Two scenarios were assessed — keep the original palette, or move to something more institutional — citing brand–color congruence theory and sector patterns. <b>A recommendation that took a side:</b> a dominant dark base with one controlled accent, holding on to some equity from the previous brand without inheriting its B2B perception problem.",
+
+    "log4-w": "WEEK 5",
+    "log4-t": "IDENTITY",
+    "log4-h": "Brand book + executive toolkit",
+    "log4-d": "An audit of the brand book surfaced missing values and an unresolved architecture decision. A full executive toolkit was then built on exactly the look and feel already approved — without reinventing what was already working.",
+
+    "log5-w": "WEEK 6",
+    "log5-t": "NARRATIVE",
+    "log5-h": "Resolve the tension, don't hide it",
+    "log5-d": "The brand book explicitly stated that the company does not define itself by a role that the entire narrative logic nonetheless pointed to. <b>Strategic call:</b> let the role emerge from how the ecosystem behaves, not from the company's own claim. Four synonyms for stability were collapsed into a single anchor concept.",
+
+    "log6-w": "WEEK 7",
+    "log6-t": "VIDEO",
+    "log6-h": "Quality control on the launch script",
+    "log6-d": "The script for the anniversary and rebrand announcement video was reviewed against the recorded audio, making sure the final voice-over held the approved tone — not the narrator's own reading of it.",
+
+    "log7-w": "WEEK 8",
+    "log7-t": "EVENT",
+    "log7-h": "Vendor evaluation for the launch",
+    "log7-d": "Two video vendors compared on portfolio quality, with a reasoned final recommendation for the corporate event piece.",
+
+    "log8-w": "WEEK 9",
+    "log8-t": "WEB + DEV + SEO",
+    "log8-h": "Architecture, intake and GEO layer — in parallel",
+    "log8-d": "An architecture document for the multi-country, multi-language site, followed by an interactive form deployed to the cloud so each member of the leadership team could complete their part of the site copy independently, with no backend and no friction. The GEO/AEO layer shipped through the same technical pipeline, in parallel.",
+
+    "comp-eyebrow": "What this proves",
+    "comp-h2": "This isn't a &quot;look how much I did&quot; case. It's evidence of four specific capabilities.",
+    "comp1-k": "01 / Range",
+    "comp1-h": "Strategy, design, copy and development under a single point of view",
+    "comp1-p": "Naming, visual identity, narrative, web architecture and SEO weren't loose deliverables from separate vendors. They were one person's decisions, connected from day one — without the loss of coherence that rebranding by committee usually produces.",
+    "comp2-k": "02 / Speed",
+    "comp2-h": "Full cycle from brand to launch in 9 weeks",
+    "comp2-p": "What normally takes a quarter with an agency — kickoff, research, proposals, rounds of feedback — ran alongside other live projects, without giving up rigor at any stage.",
+    "comp3-k": "03 / Judgment under ambiguity",
+    "comp3-h": "Decisions backed by evidence, and defended to the client",
+    "comp3-p": "The palette was settled with brand–color congruence theory, not taste. The tension between the brand book and the narrative wasn't buried: it was resolved, and the reasoning was explained.",
+    "comp4-k": "04 / Operational autonomy",
+    "comp4-h": "From strategy to technical deploy, without depending on anyone else",
+    "comp4-p": "The same workflow that designed the site architecture also built and shipped the content intake tool and the AI optimization layer — without waiting on an external dev team.",
+
+    "cta-h2": "I'm looking for my next Marketing Director role in digital infrastructure, telecom or B2B tech.",
+    "cta-linkedin": "Let's connect on LinkedIn",
+    "cta-mail": "Email me",
+
+    "footer-nda": "Client identity protected under confidentiality"
+  };
+
+  (function () {
+    var nodes = document.querySelectorAll('[data-i18n]');
+    var ES = {};
+    nodes.forEach(function (el) { ES[el.getAttribute('data-i18n')] = el.innerHTML; });
+
+    var META = {
+      es: {
+        title: 'Sistema de marca B2B en 9 semanas | Andrea Saravia Sauter',
+        desc: 'Cómo una sola Marketing Director ejecutó, sin equipo, lo que normalmente requiere una agencia completa: naming, identidad visual, narrativa, web y producción.'
+      },
+      en: {
+        title: 'A B2B brand system in 9 weeks | Andrea Saravia Sauter',
+        desc: 'How a single Marketing Director delivered, with no team, what normally takes a full agency: naming, visual identity, narrative, web and production.'
+      }
+    };
+
+    function apply(lang) {
+      nodes.forEach(function (el) {
+        var k = el.getAttribute('data-i18n');
+        var val = (lang === 'en' && I18N_EN[k] !== undefined) ? I18N_EN[k] : ES[k];
+        if (val !== undefined) el.innerHTML = val;
+      });
+      var meta = META[lang] || META.es;
+      document.title = meta.title;
+      var mDesc = document.querySelector('meta[name="description"]');
+      if (mDesc) mDesc.setAttribute('content', meta.desc);
+      document.documentElement.lang = lang;
+      var other = lang === 'es' ? 'en' : 'es';
+      var btn = document.getElementById('lang-toggle');
+      btn.textContent = other.toUpperCase();
+      btn.setAttribute('data-target', other);
+      try { localStorage.setItem('sarauter_lang', lang); } catch (e) {}
+    }
+
+    var start = 'es';
+    try {
+      var saved = localStorage.getItem('sarauter_lang');
+      if (saved === 'es' || saved === 'en') start = saved;
+      else if ((navigator.language || '').toLowerCase().indexOf('es') !== 0) start = 'en';
+    } catch (e) {}
+    apply(start);
+
+    document.getElementById('lang-toggle').addEventListener('click', function () {
+      apply(this.getAttribute('data-target'));
+    });
+  })();
 </script>
 
 </body>
